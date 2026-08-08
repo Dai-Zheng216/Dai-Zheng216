@@ -26,12 +26,18 @@
 <!--   GitHub stats graph -->
 ### 📈 GitHub Activity Graph:
 
+<!--   green snake -->
+![Dai-Zheng216's github activity graph](https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake.svg)
+
 <!--   stats + languages -->
 | .                                                                                                                                                       | .                                                                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | ![Dai-Zheng216's github stats](https://github-stats-extended.vercel.app/api?username=Dai-Zheng216&show_icons=true&theme=radical&include_all_commits=true) | ![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=Dai-Zheng216&theme=radical&layout=compact)        |
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dai-Zheng216"></img>
+
+<!-- dark snake -->
+![Dai-Zheng216's github activity graph](https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake-dark.svg)
 
 <!--   profile-green-animate -->
 ![](./profile-3d-contrib/profile-green-animate.svg)
@@ -52,7 +58,7 @@
 </p>
 
 
-<!-- <img src="/github-metrics.svg" alt="Metrics" width="100%"> -->
+<img src="/github-metrics.svg" alt="Metrics" width="100%">
 
 
 #### Thanks for visiting :heart:
