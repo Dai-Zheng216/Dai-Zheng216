@@ -87,6 +87,9 @@
 > 🔄 Auto-refreshed by GitHub Actions — my most recently active repositories.
 
 <!-- AUTO-REPOS-START -->
+| &nbsp; | &nbsp; |
+|---|---|
+| [**ai-infra-**](https://github.com/Dai-Zheng216/ai-infra-)<br/>ai infra 学习笔记<br/>`Misc` ⭐ 1 | [**desktop-pet-android**](https://github.com/Dai-Zheng216/desktop-pet-android)<br/>desktop-pet-android桌面小宠物<br/>`Kotlin` ⭐ 1 |
 <!-- AUTO-REPOS-END -->
 
 ---
