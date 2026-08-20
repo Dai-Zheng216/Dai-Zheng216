@@ -1,6 +1,5 @@
 <!-- ================================================================
      GitHub Profile — Zheng Dai (Dai-Zheng216)
-     Design: GitHub 官方绿配色体系 (绿 #39d353 → 深绿 #26a641)
      ================================================================ -->
 
 <!-- ==================== HEADER ==================== -->
@@ -33,75 +32,6 @@
 - 🔭 Currently focusing on **AI Infrastructure** & high-performance systems
 - 📕 Find me on **RedNote** (小红书) — search **「DAY岱」**
 
----
-
-## 🛠️ Tech Stack
-
-**Languages**
-
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-
-**AI & Machine Learning**
-
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![TensorRT](https://img.shields.io/badge/TensorRT-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![vLLM](https://img.shields.io/badge/vLLM-black?style=for-the-badge)
-![SGLang](https://img.shields.io/badge/SGLang-39d353?style=for-the-badge&labelColor=0d1117)
-![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97_Hugging_Face-FFD21E?style=for-the-badge&logoColor=black)
-
-**Tools & Platforms**
-
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
----
-
-## 📌 Latest Projects
-
-> 🔄 Auto-refreshed by GitHub Actions — my most recently active repositories.
-
-<!-- AUTO-REPOS-START -->
-<!-- AUTO-REPOS-END -->
-
----
-
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Dai-Zheng216&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9&ring_color=26a641" alt="GitHub Stats" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dai-Zheng216&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img height="160" src="https://streak-stats.demolab.com?user=Dai-Zheng216&hide_border=true&bg_color=0d1117&ring_color=39d353&fire_color=26a641&currStreakLabel=39d353&sideLabels=c9d1d9&currStreakNum=ffffff&sideNums=c9d1d9&dates=8b949e" alt="GitHub Streak" />
-</p>
-
----
-
-## 🐍 Contribution Snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake.svg" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake.svg" />
-  </picture>
-</p>
-
-## 🧊 3D Contribution Graph
-
-<p align="center">
-  <img width="100%" src="profile-3d-contrib/profile-green-animate.svg" alt="3D contribution graph" />
-</p>
-
----
-
 ## 📫 Connect With Me
 
 <p align="center">
@@ -124,7 +54,49 @@
   -->
 </p>
 
-<!-- ==================== FOOTER ==================== -->
+---
+
+## 🛠️ Tech Stack
+
+**Languages**
+
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
+
+**AI & Machine Learning**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![vLLM](https://img.shields.io/badge/vLLM-black?style=for-the-badge)
+![SGLang](https://img.shields.io/badge/SGLang-39d353?style=for-the-badge&labelColor=0d1117)
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![TensorRT](https://img.shields.io/badge/TensorRT-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+
+**Tools & Platforms**
+
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![CMake](https://img.shields.io/badge/CMake-064F8C?style=for-the-badge&logo=cmake&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+---
+
+## 📌 Latest Projects
+
+> 🔄 Auto-refreshed by GitHub Actions — my most recently active repositories.
+
+<!-- AUTO-REPOS-START -->
+<!-- AUTO-REPOS-END -->
+
+---
+
+## 🐍 Contribution Snake
+
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:39d353,100:26a641&section=footer&text=Thanks%20for%20visiting!%20%F0%9F%92%9A&fontSize=18&fontColor=ffffff&animation=fadeIn" alt="footer" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake.svg" />
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/output/github-contribution-grid-snake.svg" />
+  </picture>
 </p>
