@@ -81,19 +81,20 @@
 
 ## 📊 GitHub Analytics
 
+> 卡片由 Actions 每日生成本仓库 SVG，直连 raw.githubusercontent.com，国内访问稳定
+
 <p align="center">
-  <img height="155" src="https://github-readme-stats.vercel.app/api?username=Dai-Zheng216&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9&ring_color=26a641" alt="GitHub Stats" />
-  <img height="155" src="https://streak-stats.demolab.com?user=Dai-Zheng216&hide_border=true&bg_color=0d1117&ring_color=39d353&fire_color=26a641&currStreakLabel=39d353&sideLabels=c9d1d9&currStreakNum=ffffff&sideNums=c9d1d9&dates=8b949e" alt="GitHub Streak" />
+  <img src="profile-summary-cards/0-profile-details.svg" alt="Profile Details" width="100%" />
 </p>
 
 <p align="center">
-  <img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dai-Zheng216&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=39d353&icon_color=39d353&text_color=c9d1d9" alt="Top Languages" />
+  <img src="profile-summary-cards/1-repos-per-language.svg" alt="Repos per Language" width="48%" />
+  <img src="profile-summary-cards/2-most-commit-language.svg" width="48%" alt="Most Commit Language" />
 </p>
 
-## 📈 Contribution Timeline
-
 <p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Dai-Zheng216&hide_border=true&area=true&custom_title=Contribution%20Timeline&bgColor=0d1117&color=39d353&line=26a641&point=39d353&areaColor=26a641" alt="Contribution Timeline" />
+  <img src="profile-summary-cards/3-stats.svg" alt="Stats" width="48%" />
+  <img src="profile-summary-cards/4-productive-time.svg" alt="Productive Time" width="48%" />
 </p>
 
 ## 🐍 Contribution Snake

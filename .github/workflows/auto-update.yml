@@ -159,3 +159,34 @@ jobs:
           git commit -m "chore: auto-update latest projects"
           git pull --rebase || true
           git push
+
+  # ============ 4. 生成统计卡（存仓库，不依赖 Vercel，国内可稳定加载） ============
+  generate-summary-cards:
+    name: Generate profile summary cards
+    needs: update-repo-list
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          THEME: chartreuse-dark
+
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A profile-summary-cards
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: update profile summary cards"
+          git pull --rebase || true
+          git push
