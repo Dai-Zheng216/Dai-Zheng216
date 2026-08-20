@@ -1,0 +1,161 @@
+name: Auto Update Profile
+
+on:
+  # 每天定时更新（UTC 00:30 = 北京时间 08:30）
+  schedule:
+    - cron: "30 0 * * *"
+  # 手动触发
+  workflow_dispatch:
+  # 推送到 main 分支时触发
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  # ============ 1. 生成贡献蛇图 ============
+  generate-snake:
+    name: Generate contribution snake
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Generate snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          # GitHub 官方绿格子 + 绿蛇（与整体绿色主题统一）
+          outputs: |
+            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%23006d32
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2339d353
+
+      - name: Push snake to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ============ 2. 生成 3D 贡献图 ============
+  generate-3d-contrib:
+    name: Generate 3D contribution graph
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -A .
+          git commit -m "chore: update 3d contribution graphs" || echo "No changes"
+          git push
+
+  # ============ 3. 更新 README 中的最新项目列表 ============
+  update-repo-list:
+    name: Update latest projects in README
+    needs: generate-3d-contrib   # 串行推送 main，避免并发 push 冲突
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest repos & update README
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OWNER: ${{ github.repository_owner }}
+        run: |
+          set -euo pipefail
+          echo "Fetching latest repositories for $OWNER ..."
+
+          # 拉取按最近更新排序的公开仓库（排除个人主页仓库本身和 fork）
+          REPOS_JSON=$(curl -s -H "Authorization: Bearer ${GH_TOKEN}" \
+            "https://api.github.com/users/${OWNER}/repos?sort=pushed&direction=desc&per_page=100&type=owner")
+
+          # 生成项目列表 Markdown（最多 6 个）
+          TABLE=$(echo "$REPOS_JSON" | python3 -c '
+          import json, sys
+
+          repos = json.load(sys.stdin)
+          skip = {sys.argv[1].lower()}          # 跳过主页仓库
+          picked = []
+          for r in repos:
+              if r["name"].lower() in skip or r.get("fork"):
+                  continue
+              picked.append(r)
+              if len(picked) >= 6:
+                  break
+
+          if not picked:
+              print("<!-- no public repos found -->")
+              sys.exit(0)
+
+          lines = []
+          for i in range(0, len(picked), 2):
+              row = []
+              for r in picked[i:i+2]:
+                  desc = (r.get("description") or "No description").strip()
+                  if len(desc) > 55:
+                      desc = desc[:52] + "..."
+                  name = r["name"]
+                  url = r["html_url"]
+                  lang = r.get("language") or "Misc"
+                  stars = r.get("stargazers_count", 0)
+                  row.append(f"[**{name}**]({url})<br/>{desc}<br/>`{lang}` ⭐ {stars}")
+              lines.append("| " + " | ".join(row) + " |")
+
+          header = "| &nbsp; | &nbsp; |\n|---|---|"
+          print(header + "\n" + "\n".join(lines))
+          ' "$OWNER")
+
+          echo "Generated table:"
+          echo "$TABLE"
+
+          # 替换 README 中的标记区块
+          python3 - "$TABLE" <<'PYEOF'
+          import sys, re, pathlib
+
+          table = sys.argv[1]
+          readme = pathlib.Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+
+          pattern = re.compile(
+              r"(<!-- AUTO-REPOS-START -->).*?(<!-- AUTO-REPOS-END -->)",
+              re.DOTALL,
+          )
+          new_block = rf"\1\n{table}\n\2"
+          if pattern.search(content):
+              content = pattern.sub(new_block, content)
+          else:
+              print("WARNING: AUTO-REPOS markers not found in README!")
+              sys.exit(1)
+
+          readme.write_text(content, encoding="utf-8")
+          print("README updated successfully.")
+          PYEOF
+
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: auto-update latest projects"
+          git pull --rebase || true
+          git push
