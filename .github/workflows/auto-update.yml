@@ -57,16 +57,5 @@ jobs:
         with:
           USERNAME: ${{ github.repository_owner }}
           THEME: chartreuse_dark
-
-      - name: Commit & Push
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add -A profile-summary-cards
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git commit -m "chore: update profile summary cards"
-          git pull --rebase || true
-          git push
+          # Action 默认 AUTO_PUSH: true，会自行 commit & push 到 main，
+          # 无需再手写 Commit & Push 步骤（此前手写步骤因目录名写错必然失败）
