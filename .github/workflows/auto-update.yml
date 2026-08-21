@@ -39,23 +39,3 @@ jobs:
           build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  # ============ 3. 生成统计卡（存仓库，不依赖 Vercel，国内可稳定加载） ============
-  generate-summary-cards:
-    name: Generate profile summary cards
-    needs: generate-snake    # 串行推送 main，避免并发 push 冲突
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Generate cards
-        uses: vn7n24fzkq/github-profile-summary-cards@release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          USERNAME: ${{ github.repository_owner }}
-          THEME: chartreuse_dark
-          # Action 默认 AUTO_PUSH: true，会自行 commit & push 到 main，
-          # 无需再手写 Commit & Push 步骤（此前手写步骤因目录名写错必然失败）
