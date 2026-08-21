@@ -80,17 +80,7 @@
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
----
 
-## 📌 Latest Projects
-
-> 🔄 Auto-refreshed by GitHub Actions — my most recently active repositories.
-
-<!-- AUTO-REPOS-START -->
-| &nbsp; | &nbsp; |
-|---|---|
-| [**ai-infra-**](https://github.com/Dai-Zheng216/ai-infra-)<br/>ai infra 学习笔记<br/>`Misc` ⭐ 1 |
-<!-- AUTO-REPOS-END -->
 
 ---
 
