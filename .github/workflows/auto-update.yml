@@ -34,11 +34,14 @@ jobs:
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=%23006d32
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=%2339d353
 
+      - name: Refresh snake image URLs
+        run: python .github/scripts/refresh-snake-links.py
+
       - name: Commit & Push snake to main
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add dist/
+          git add dist/ README.md
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
