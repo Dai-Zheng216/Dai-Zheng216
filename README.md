@@ -88,8 +88,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/main/dist/github-contribution-grid-snake-dark.svg?v=ea2946db3aa21aa7" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/main/dist/github-contribution-grid-snake.svg?v=dbb2cfd87d255956" />
-    <img alt="contribution snake" src="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/main/dist/github-contribution-grid-snake.svg?v=dbb2cfd87d255956" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/main/dist/github-contribution-grid-snake-dark.svg?v=2d4bd24b64b606c1" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/main/dist/github-contribution-grid-snake.svg?v=42b898b60ce46738" />
+    <img alt="contribution snake" src="https://raw.githubusercontent.com/Dai-Zheng216/Dai-Zheng216/main/dist/github-contribution-grid-snake.svg?v=42b898b60ce46738" />
   </picture>
 </p>
